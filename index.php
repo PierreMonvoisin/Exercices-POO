@@ -1,8 +1,8 @@
 <?php
 class Character {
-  private int $health;
-  private int $mana;
-  private Stuff $stuff;
+  protected int $health;
+  protected int $mana;
+  protected Stuff $stuff;
 
   public function __construct($health, $mana, $stuff) {
     $this->health = $health;
@@ -15,7 +15,7 @@ class Character {
   }
 }
 class Orc extends Character {
-  private int $health = 1000;
+  protected int $health = 1000;
 
   public function useHammer() : bool {
   }
@@ -23,9 +23,9 @@ class Orc extends Character {
   }
 }
 class Stuff {
-  private string $head;
-  private string $body;
-  private string $weapon;
+  protected string $head;
+  protected string $body;
+  protected string $weapon;
 
   public function __construct($head, $body, $weapon) {
     $this->head = $head;
